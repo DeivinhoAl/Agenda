@@ -13,7 +13,7 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btnaddcontact : FloatingActionButton //classe terá uma referência privada.
+    private lateinit var btnaddcontact : FloatingActionButton //classe terá uma referência privada
     fun goToAddContactActivity(){ // Separando a responsabilidade
         val intent = Intent(this, AddContactActivity::class.java)
         startActivity(intent)
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onStart(){
         super.onStart()
-        val tasklist = TaskDAO(this).list() // Lista recebe o TaslDao fazendo o método list retornar a lista.
+        val tasklist = TaskDAO(this).list() // Lista recebe o TaslDao fazendo o método list retornar a lista toda.
         tasklist.forEach { //Para cada item dessa lista
             Log.i("info_db", "Id: ${it.id} - nome: ${it.nome} - numero: ${it.numero} - gmail: ${it.gmail} - Created: ${it.created}")
         }

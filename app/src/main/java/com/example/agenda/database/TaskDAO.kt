@@ -15,7 +15,7 @@ class TaskDAO(context : Context) : ITask {
         content.put("gmail",Task.gmail)
 
         try {
-            write.insert("tasks", null, content) //Precisamos passar os dados por um content
+            write.insert("tasks", null, content) //Precisamos passar os dados por um contents
             Log.i("info_db", "Registro inserido com sucesso")
         } catch (e: Exception) {
             Log.i("info_db", "Erro ao criar registro")
